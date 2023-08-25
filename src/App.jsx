@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   // const [count, setCount] = useState(0)
   const [amount, setAmount] = useState(0);
-  const [flipped, setFlipped] = useState(false);
+  const [inverted, setInverted] = useState(false);
 
   const onChange = (event) => {
     // console.log(event.target.value);
@@ -13,10 +13,10 @@ function App() {
   const reset = () => {
     setAmount(0);
   };
-  const onFlip = () => {
-    // setFlipped(!flipped);
+  const onInvert = () => {
+    // setInverted(!inverted);
     reset();
-    setFlipped((current) => !current);
+    setInverted((current) => !current);
   };
 
   return (
@@ -24,13 +24,13 @@ function App() {
       <h1>Time Converter</h1>
       <label htmlFor="minutes">Minutes : </label>
       <input
-        value={flipped ? amount * 60 : amount}
+        value={inverted ? amount * 60 : amount}
         onChange={onChange}
         id="minutes"
         placeholder="Minutes"
         type="number"
-        // this input will be disabled if flipped is true
-        disabled={flipped === true}
+        // this input will be disabled if inverted is true
+        disabled={inverted === true}
       />
 
       <br />
@@ -39,20 +39,20 @@ function App() {
       <label htmlFor="hours">Hours : </label>
       <input
         // value={minutes / 60}
-        value={flipped ? amount : Math.round(amount / 60)}
+        value={inverted ? amount : Math.round(amount / 60)}
         onChange={onChange}
         id="hours"
         placeholder="Hours"
         type="number"
         // readOnly
-        // it will be disabled if flipped is false
-        disabled={flipped === false}
+        // it will be disabled if inverted is false
+        disabled={inverted === false}
       />
 
-      <p>you want to convert : {amount}</p>
+      <p>You want to convert : {amount}</p>
 
-      <button onClick={reset}>reset</button>
-      <button onClick={onFlip}>flip</button>
+      <button onClick={reset}>Reset</button>
+      <button onClick={onInvert}>{inverted ? "invert" : "Turn Back"}</button>
     </>
   );
 }
