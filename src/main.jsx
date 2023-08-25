@@ -6,7 +6,7 @@ import MinutesToHours from "./components/MinutesToHours";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <MinutesToHours />;
+    <MinutesToHours />
     <App />
   </React.StrictMode>
 );
