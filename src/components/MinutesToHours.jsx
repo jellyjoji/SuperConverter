@@ -21,7 +21,6 @@ function MinutesToHours() {
 
   return (
     <>
-      <h1>Time Converter</h1>
       <label htmlFor="minutes">Minutes : </label>
       <input
         value={inverted ? amount * 60 : amount}
