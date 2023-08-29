@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../App.css";
 
 function KmToMiles() {
   // const [count, setCount] = useState(0)

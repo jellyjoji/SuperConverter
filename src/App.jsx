@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./App.css";
-import MinutesToHours from "./components/MinutesToHours";
-import KmToMiles from "./components/KmToMiles";
+import "@/App.css";
+import MinutesToHours from "@/components/MinutesToHours";
+import KmToMiles from "@/components/KmToMiles";
 
 function App() {
   const [index, setIndex] = useState(0);

@@ -1,9 +1,9 @@
 # super convert
 
-# React 설치 가이드
+## React 설치 가이드
 
 - [super convert](#super-convert)
-- [React 설치 가이드](#react-설치-가이드)
+  - [React 설치 가이드](#react-설치-가이드)
   - [환경 설정](#환경-설정)
     - [vite 설정](#vite-설정)
     - [react router 설치](#react-router-설치)
